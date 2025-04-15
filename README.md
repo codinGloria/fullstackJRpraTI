@@ -1,3 +1,5 @@
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=fdfe00&height=120&section=header"/>
+
 <h1 align="center"> Formação: Dev. Full Stack Jr. 2025 🚀 </h1>
 
 Plataforma: Codifica & +praTi
@@ -231,6 +233,8 @@ A **Codifica** é uma Edtech especializada no ensino de tecnologia, inovação e
 A **+praTi** é uma iniciativa social criada por empresários da área de TI do RS, preocupados com o descompasso entre a demanda do mercado e a qualificação de profissionais. Desde 2020, oferece formação gratuita para quem deseja entrar no setor de tecnologia, seja por vocação ou transição de carreira, construindo um futuro promissor na área.
 
 ---
+
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=fdfe00&height=120&section=footer"/>
 
 💬 Para cada módulo, você encontrará tarefas, projetos e anotações salvas em suas respectivas pastas.  
 📌 Os projetos finais estão destacados com foco em práticas do mercado.  
