@@ -234,8 +234,8 @@ A **+praTi** é uma iniciativa social criada por empresários da área de TI do 
 
 ---
 
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=fdfe00&height=120&section=footer"/>
-
 💬 Para cada módulo, você encontrará tarefas, projetos e anotações salvas em suas respectivas pastas.  
 📌 Os projetos finais estão destacados com foco em práticas do mercado.  
 ✅ Este repositório será atualizado ao longo da formação com novos conteúdos e entregas.
+
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=fdfe00&height=120&section=footer"/>
