@@ -3,31 +3,31 @@ const prompt = require("prompt-sync")()
 // Exercício 03: Calculadora Simples (4 operações fundamentais)
 // usando entrada do usuário
 
-let num1 = parseInt(prompt("Digite o primeiro número: "))
-let num2 = parseInt(prompt("Digite o segundo número: "))
-let operacao = prompt("Digite a operação desejada: [+] Soma, [-] Subtração, [*] Multiplicação e [/] Divisão: ")
-let resultado = 0
+let number1 = parseInt(prompt("Digite o primeiro número: "))
+let number2 = parseInt(prompt("Digite o segundo número: "))
+let operacao1 = prompt("Digite a operação desejada: [+] Soma, [-] Subtração, [*] Multiplicação e [/] Divisão: ")
+let resultado1 = 0
 
-if (operacao === "+") {
-    resultado = num1 + num2
-} else if (operacao === "-") {
-    resultado = num1 - num2
-} else if (operacao === "*") {
-    resultado = num1 * num2
-} else if (operacao === "/") {
-    if (num2 === 0) {
+if (operacao1 === "+") {
+    resultado1 = number1 + number2
+} else if (operacao1 === "-") {
+    resultado1 = number1 - number2
+} else if (operacao1 === "*") {
+    resultado1 = number1 * number2
+} else if (operacao1 === "/") {
+    if (number2 === 0) {
         console.log("Divisão por zero não é permitida.")
-        resultado = undefined
+        resultado1 = undefined
     } else {
-        resultado = num1 / num2
+        resultado1 = number1 / number2
     }
 } else {
     console.log("Operação inválida.")
-    resultado = undefined
+    resultado1 = undefined
 }
 
-if (resultado !== undefined) {
-    console.log(`\nO resultado da operação ${num1} ${operacao} ${num2} é: ${resultado}`)
+if (resultado1 !== undefined) {
+    console.log(`\nO resultado da operação ${number1} ${operacao1} ${number2} é: ${resultado1}`)
 }
 
 // Aprendendo Switch Case
