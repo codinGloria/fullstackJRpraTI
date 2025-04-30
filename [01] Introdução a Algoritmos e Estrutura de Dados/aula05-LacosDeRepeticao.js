@@ -10,17 +10,17 @@ let opcao = prompt("Qual serviço você deseja acessar? 1: Saber a média ou 2: 
 switch (opcao) {
     case "1":
         console.log(`A média é: ${media}`)
-        break;
+        break
     case "2":
         if (media >= 60) {
             console.log("Parabéns, você foi aprovado! :D")
         } else {
             console.log("Infelizmente, você foi reprovado :/")
         }
-        break;
+        break
     default:
         console.log("Opção inválida")
-        break;
+        break
 }
 
 // While
@@ -48,3 +48,11 @@ for (let i = 0; i <= 10; i++) {
     console.log(i)
 }
 
+// Do-While
+
+do {
+    console.log(i)
+    i++
+} while (i < 10)
+
+console.log("Terminou a contagem!")
