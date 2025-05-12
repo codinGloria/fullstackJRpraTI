@@ -25,7 +25,7 @@ Este repositório contém a resolução da Lista de Exercícios 1 da trilha Dev.
 
 1. Clone este repositório: git clone https://github.com/codinGloria/fullstackJRpraTI
 
-2. Acesse a pasta do projeto: cd Listas de Exercícios/(01) Estrutura Básica JS
+2. Acesse a pasta do projeto: cd ListasDeExercicios/01.EstruturaBasicaJS
 
 3. Caso ainda não tenha o Node.js instalado, instale [aqui](https://nodejs.org/pt)
 
