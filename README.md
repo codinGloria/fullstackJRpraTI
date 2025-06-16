@@ -14,7 +14,7 @@ A formação é composta por **6 módulos principais**, cada um com aulas teóri
 
 ---
 
-<h3><a href="./01. Algoritmos e Estrutura de Dados">[01] Algoritmos e Estrutura de Dados</a></h3>
+<h3><a href="./01. Algoritmos e Estrutura de Dados">[01] Algoritmos e Estrutura de Dados</a></h3> ✅
 
   - História da Computação
   - Como os Computadores Funcionam: Hardware e Software
