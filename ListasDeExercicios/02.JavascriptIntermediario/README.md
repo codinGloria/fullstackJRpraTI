@@ -27,7 +27,7 @@ O foco dessa lista é o aprofundamento em estruturas de controle, funções (inc
 
 1. Clone este repositório: git clone https://github.com/codinGloria/fullstackJRpraTI
 
-2. Acesse a pasta do projeto: cd ListasDeExercicios/01.EstruturaBasicaJS
+2. Acesse a pasta do projeto: cd ListasDeExercicios/02.JavascriptIntermediario
 
 3. Caso ainda não tenha o Node.js instalado, instale [aqui](https://nodejs.org/pt)
 
