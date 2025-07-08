@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia dos Namorados</title>
+    <style>
+        img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        #peti {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #444;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            object-fit: cover;;
+        }
+
+        table, tr, td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Visite o <a href="https://developer.mozilla.org/pt-BR">MDN Web Docs</a> para a documentação HTML
+    </p>
+
+    <a href="#secao-ancorada">Link para a seção ancorada</a>
+
+    <p id="secao-ancorada">Seção Ancorada
+        <a href="../aula05-EstruturaBasicaHTML/codigoEmAula.html">Link para a primeira aula</a>
+    </p>
+    
+    <p>
+        <a href="mailto:suporte@naovouresponder.com.br" target="_blank" rel="noopener noreferrer">Envie um e-mail para o suporte</a>
+    </p>
+
+    <h3>Imagem de Exemplo</h3>
+    <img src="assets/littlechoco.png" alt="" width="300">
+    
+    <img src="assets/littledori.png" alt="Doritos picutito" width="300">
+
+    <img src="./assets/littlepeti.png" alt="" id="peti">
+
+    <table>
+        <tr>
+            <th>Título</th>
+            <th>Vídeo</th>
+        </tr>
+        <tr>
+            <td>Apresentação do Conteúdo</td>
+            <td>
+                <div>
+                    <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/slMub4NtrSk?si=pmdNzRaDg0QwcQEd" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen></iframe>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
