@@ -1,0 +1,43 @@
+body {
+    background-color: #ccc;
+}
+
+.pai {
+    color: green;
+    font-family: arial;
+    border: 1px solid red;
+    margin: 10px;
+}
+
+p {
+    border: inherit;
+    margin: inherit;
+}
+
+article p {
+    color: blue;
+}
+
+/* RELACIONAMENTO DE SELETORES CSS
+
+(espaço) seleciona todos os elementos que são descendentes do elemento pai.
+
+(>) seleciona apenas os elementos que são filhos diretos do elemento pai.
+
+(+) seleciona o primeiro elemento que é irmão adjacente ao elemento anterior.
+
+(~) seleciona todos os elementos que são irmãos do elemento anterior. 
+    
+*/
+*/
+article > a {
+    color: green;
+}
+
+h1 + p {
+    color: red;
+}
+
+h1 ~ p {
+    color: red;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        body {
+            font-size:12px;
+        }
+
+        div {
+            border: 1px solid red;
+            font-size: 20px;
+        }
+
+        h2.content {
+            border: inherit;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin-left: 100px;
+            box-sizing: border-box;
+        }
+
+        h2.units {
+            border: inherit;
+            /* height: 20pc;  20% of the viewport height */
+            /* height:100vh;  100% of the viewport height */
+            height: 100vmin; /* 100% of the viewport's smaller dimension (vmax for the biggest) */
+            width: 100vmin;
+            font-size: 2em;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h2 class="content">Content</h2>
+    </div>
+
+    <div>
+        <h2 class="units">Unidades de Medida</h2>
+    </div>
+</body>
+</html>
