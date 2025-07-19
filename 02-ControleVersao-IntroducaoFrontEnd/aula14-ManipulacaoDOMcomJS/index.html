@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM e BOM</title>
+    <style>
+        .focado {
+            color: blue;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Título Original</h1>
+    <button id="btnAlterar">Alterar Título</button>
+
+    <button id="btnAdicionar">Adicionar Item</button>
+    <ul id="lista"></ul>
+
+    <p id="paragrafo">Copa Mundial de Clubes</p>
+
+    <button onclick="iniciarDialogos()" >Iniciar</button>
+
+    <button onclick="btnIr()" id="btnIr">Ir para o Google</button>
+    <button onclick="btnAtualizar()" id="btnAtualizar">Atualizar página</button>
+    <button onclick="exibirInfo()" id="saida">Exibir Informações</button>
+
+    <script>
+        const p = document.getElementById('paragrafo');
+        const btn = document.getElementById('btnAlterar');
+        const  titulo = document.getElementById('titulo');
+        const btnAdicionar = document.getElementById('btnAdicionar');
+        const lista = document.getElementById('lista');
+
+        let contador = 1
+
+        btn.addEventListener('click', () => {
+            titulo.textContent = 'Título Atualizado';
+        });
+
+        btnAdicionar.addEventListener('click', () => {
+            const item = document.createElement('li');
+            item.textContent = `Item ${contador++}`;
+
+            lista.appendChild(item)
+        });
+
+        p.addEventListener('mouseover', () => {
+            p.classList.add('focado')
+        })
+
+        p.addEventListener('mouseout', () => {
+            p.classList.remove('focado')
+        })
+
+        function iniciarDialogos() {
+            alert('Bem-vindo')
+
+            const nome = prompt('Qual é o seu nome?');
+
+            if(confirm(`Confirmar nome: ${nome}`)) {
+                alert(`Olá, ${nome}!`);
+            } else {
+                alert('Você cancelou a confirmação :/');
+            }
+        }
+
+        function btnIr(){
+            window.location.href = 'https://www.google.com';
+        }
+
+        function btnAtualizar() {
+            window.location.reload();
+        }
+
+        function exibirInfo(){
+            const info = {
+                userAgent: navigator.userAgent,
+                plataforma: navigator.platform,
+                idioma: navigator.language,
+                larguraTela: window.innerWidth,
+                alturaTela: window.innerHeight
+            }
+
+            document.getElementById('saida').textContent = JSON.stringify(info, null, 2)
+        }
+
+    </script>
+</body>
+</html>
