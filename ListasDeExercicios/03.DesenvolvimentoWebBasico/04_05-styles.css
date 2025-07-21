@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header, main, footer {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+header {
+    background-color: hotpink;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+main {
+    background-color: #f0f0f0;
+}
+
+footer {
+    background-color: hotpink;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+/* EXERCICIO 05*/
+
+h2 {
+    color: hotpink;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.5em;
+}
+
+.destaque {
+    font-style: italic;
+    background-color: #f7caf7;
+    border-radius: 10px;
+}
+
+#importante {
+    border-top: 6px solid hotpink;
+    padding: 10px;
+}
+
+/* EXERCICIO 06 */
+
+.galeria-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+figure {
+    background-color: #fff;
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .galeria {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria {
+    grid-template-columns: 1fr;
+    }
+}
+
+/* EXERCICIO 07 */
+.nav {
+    color: hotpink;
+    padding: 10px;
+    text-align: center;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .nav.ativo ul {
+        display: flex;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+}
