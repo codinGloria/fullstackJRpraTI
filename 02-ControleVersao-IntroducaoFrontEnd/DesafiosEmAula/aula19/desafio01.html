@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pig Latin Translator 🐷</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdf3f7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      color: #cc3366;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #cc3366;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #b32a57;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pig Latin Translator 🐷</h1>
+  <div class="container">
+    <input type="text" id="inputWord" placeholder="Type a word...">
+    <button onclick="translateWord()">Translate</button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function pigLatinTranslator(word) {
+      const vowels = ['a', 'e', 'i', 'o', 'u', 'y']
+      const lowerWord = word.toLowerCase()
+
+      let firstVowelIndex = -1
+
+      for (let i = 0; i < lowerWord.length; i++) {
+        if (vowels.includes(lowerWord[i])) {
+          firstVowelIndex = i
+          break
+        }
+      }
+
+      if (firstVowelIndex === 0 || firstVowelIndex === -1) {
+        return lowerWord + 'ay'
+      }
+
+      const prefix = lowerWord.slice(0, firstVowelIndex)
+      const stem = lowerWord.slice(firstVowelIndex)
+
+      return stem + prefix + 'ay'
+    }
+
+    function translateWord() {
+      const input = document.getElementById('inputWord').value.trim()
+      const outputDiv = document.getElementById('output')
+
+      if (input === '') {
+        outputDiv.textContent = 'Please enter a word!'
+        return
+      }
+
+      const result = pigLatinTranslator(input)
+      outputDiv.textContent = `Output: ${result}`
+    }
+  </script>
+</body>
+</html>

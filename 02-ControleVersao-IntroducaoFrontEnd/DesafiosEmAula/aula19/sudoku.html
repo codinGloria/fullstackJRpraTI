@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Sudoku 4x4</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    button {
+      background-color: #3366cc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #274b99;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 50px);
+      grid-template-rows: repeat(4, 50px);
+      gap: 4px;
+      margin-top: 30px;
+    }
+
+    .cell {
+      width: 50px;
+      height: 50px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #ccc;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .cell:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sudoku 4x4 Generator</h1>
+  <button onclick="generateSudoku()">Gerar Sudoku</button>
+  <div id="sudokuGrid" class="grid"></div>
+
+  <script>
+    function generateSudoku() {
+      const grid = document.getElementById('sudokuGrid')
+      grid.innerHTML = ''
+
+      // Base válida para um Sudoku 4x4
+      const base = [
+        [1, 2, 3, 4],
+        [3, 4, 1, 2],
+        [2, 1, 4, 3],
+        [4, 3, 2, 1]
+      ]
+
+      // Função para embaralhar as linhas e colunas mantendo validade do sudoku
+      function shuffleSudoku(matrix) {
+        const clone = matrix.map(row => [...row])
+
+        // Shuffle rows in each 2x2 block
+        for (let i = 0; i < 4; i += 2) {
+          if (Math.random() > 0.5) [clone[i], clone[i+1]] = [clone[i+1], clone[i]]
+        }
+
+        // Shuffle columns in each 2x2 block
+        for (let j = 0; j < 4; j += 2) {
+          if (Math.random() > 0.5) {
+            for (let i = 0; i < 4; i++) {
+              [clone[i][j], clone[i][j+1]] = [clone[i][j+1], clone[i][j]]
+            }
+          }
+        }
+
+        return clone
+      }
+
+      const sudoku = shuffleSudoku(base)
+
+      // Exibir o sudoku na tela
+      for (let i = 0; i < 4; i++) {
+        for (let j = 0; j < 4; j++) {
+          const cell = document.createElement('div')
+          cell.className = 'cell'
+          cell.textContent = sudoku[i][j]
+          grid.appendChild(cell)
+        }
+      }
+
+      console.log("Sequências:")
+      sudoku.forEach(row => console.log(row.join(',')))
+    }
+  </script>
+</body>
+</html>
